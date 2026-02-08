@@ -4,6 +4,10 @@
 <h3 align="center">CSE Student • Web Developer • Java & DSA Learner</h3>
 
 <p align="center">
+  <img src="https://komarev.com/ghpvc/?username=abhinandbs12&label=Profile%20Views&color=0e75b6&style=flat" alt="abhinandbs12" />
+</p>
+
+<p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=20&pause=1000&center=true&vCenter=true&width=600&lines=Building+Cool+Projects;Learning+DSA+and+Web+Dev;Turning+Ideas+Into+Code;Welcome+to+My+GitHub+Profile" />
 </p>
 
