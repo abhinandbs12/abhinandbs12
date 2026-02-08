@@ -1,146 +1,97 @@
-<svg width="900" height="260" viewBox="0 0 900 260" xmlns="http://www.w3.org/2000/svg">
+<svg width="820" height="200" viewBox="0 0 820 200" xmlns="http://www.w3.org/2000/svg">
   <style>
     :root {
-      --bg: var(--color-canvas-default, #0d1117);
-      --fg: var(--color-fg-default, #c9d1d9);
-      --muted: var(--color-fg-muted, #8b949e);
-      --green: var(--color-calendar-graph-day-bg, #2ea043);
+      --bg: #0d1117;
+      --fg: #c9d1d9;
+      --muted: #8b949e;
+      --l1: #0e4429;
+      --l2: #006d32;
+      --l3: #26a641;
+      --l4: #39d353;
       --blue: #58a6ff;
       --yellow: #f1e05a;
       --red: #f85149;
     }
-    text { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .day-label { font-size: 9px; fill: var(--muted); }
+    .month-label { font-size: 10px; fill: var(--muted); }
   </style>
 
-  <rect width="900" height="260" fill="var(--bg)"/>
+  <rect width="820" height="200" rx="6" fill="var(--bg)"/>
 
-  <!-- Animated Name -->
-  <text x="20" y="28" fill="var(--fg)" font-size="20">
-    <tspan>
-      Abhinand BS — Commits Blaster
-      <animate attributeName="opacity" from="0.4" to="1" dur="1.2s" repeatCount="indefinite"/>
-    </tspan>
+  <text x="25" y="25" fill="var(--fg)" font-size="14" font-weight="600">
+    Abhinand BS / Commits Blaster
+    <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
   </text>
+  <text x="730" y="25" fill="var(--muted)" font-size="12">Level: ∞</text>
 
-  <text x="760" y="28" fill="var(--muted)" font-size="13">Score: ∞</text>
+  <text x="10" y="62" class="day-label">Mon</text>
+  <text x="10" y="86" class="day-label">Wed</text>
+  <text x="10" y="110" class="day-label">Fri</text>
+  <text x="40" y="45" class="month-label">Jan</text>
+  <text x="160" y="45" class="month-label">Feb</text>
+  <text x="280" y="45" class="month-label">Mar</text>
 
-  <!-- Player ship -->
+  <g transform="translate(40, 52)">
+    <script type="text/ecmascript">
+      /* This is just a visual representation via SVG nodes */
+    </script>
+    
+    <g>
+      <rect x="0" y="0" width="10" height="10" rx="2" fill="var(--l1)">
+        <animate attributeName="y" from="-50" to="150" dur="4s" repeatCount="indefinite" />
+      </rect>
+      <rect x="0" y="12" width="10" height="10" rx="2" fill="var(--l2)">
+        <animate attributeName="y" from="-38" to="162" dur="4s" repeatCount="indefinite" />
+      </rect>
+      <rect x="0" y="24" width="10" height="10" rx="2" fill="var(--l4)">
+        <animate attributeName="y" from="-26" to="174" dur="4s" repeatCount="indefinite" />
+      </rect>
+    </g>
+
+    <g transform="translate(24, 0)">
+      <rect x="0" y="0" width="10" height="10" rx="2" fill="var(--l3)">
+        <animate attributeName="y" from="-80" to="120" dur="3.5s" repeatCount="indefinite" />
+      </rect>
+      <rect x="0" y="12" width="10" height="10" rx="2" fill="var(--l1)">
+        <animate attributeName="y" from="-68" to="132" dur="3.5s" repeatCount="indefinite" />
+      </rect>
+    </g>
+
+    <g transform="translate(48, 0)">
+      <rect x="0" y="0" width="10" height="10" rx="2" fill="var(--l4)">
+        <animate attributeName="y" from="-20" to="180" dur="5s" repeatCount="indefinite" />
+      </rect>
+    </g>
+  </g>
+
   <g>
-    <rect x="430" y="220" width="40" height="16" rx="4" fill="var(--blue)">
+    <path d="M400,160 L420,160 L410,145 Z" fill="var(--blue)">
       <animateTransform attributeName="transform" type="translate"
-        from="-140 0" to="140 0" dur="3s" repeatCount="indefinite" direction="alternate"/>
+        values="-100 0; 100 0; -100 0" dur="6s" repeatCount="indefinite"/>
+    </path>
+    <rect width="2" height="6" fill="var(--yellow)">
+      <animateTransform attributeName="transform" type="translate"
+        values="310 145; 310 40" dur="0.8s" repeatCount="indefinite"/>
+    </rect>
+    <rect width="2" height="6" fill="var(--yellow)">
+      <animateTransform attributeName="transform" type="translate"
+        values="410 145; 410 40" dur="1s" repeatCount="indefinite" begin="0.2s"/>
+    </rect>
+    <rect width="2" height="6" fill="var(--yellow)">
+      <animateTransform attributeName="transform" type="translate"
+        values="510 145; 510 40" dur="0.9s" repeatCount="indefinite" begin="0.5s"/>
     </rect>
   </g>
 
-  <!-- Multiple bullets -->
-  <rect x="448" y="210" width="4" height="10" fill="var(--yellow)">
-    <animate attributeName="y" from="210" to="50" dur="0.7s" repeatCount="indefinite"/>
-  </rect>
-  <rect x="460" y="220" width="4" height="10" fill="var(--yellow)">
-    <animate attributeName="y" from="220" to="60" dur="0.9s" repeatCount="indefinite"/>
-  </rect>
-  <rect x="436" y="215" width="4" height="10" fill="var(--yellow)">
-    <animate attributeName="y" from="215" to="55" dur="0.8s" repeatCount="indefinite"/>
-  </rect>
-
-  <!-- GitHub-like contribution grid (7 rows, many columns) -->
-  <!-- We animate columns falling to feel like waves of commits -->
-
-  <!-- Column 1 -->
-  <g fill="var(--green)">
-    <rect x="80"  y="-10" width="14" height="14" rx="3">
-      <animate attributeName="y" from="-10" to="230" dur="3.2s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="80"  y="-30" width="14" height="14" rx="3">
-      <animate attributeName="y" from="-30" to="230" dur="3.6s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="80"  y="-50" width="14" height="14" rx="3">
-      <animate attributeName="y" from="-50" to="230" dur="4s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="80"  y="-70" width="14" height="14" rx="3">
-      <animate attributeName="y" from="-70" to="230" dur="4.4s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="80"  y="-90" width="14" height="14" rx="3">
-      <animate attributeName="y" from="-90" to="230" dur="4.8s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="80"  y="-110" width="14" height="14" rx="3">
-      <animate attributeName="y" from="-110" to="230" dur="5.2s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="80"  y="-130" width="14" height="14" rx="3">
-      <animate attributeName="y" from="-130" to="230" dur="5.6s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-
-  <!-- Column 2 -->
-  <g fill="var(--green)">
-    <rect x="120" y="-20" width="14" height="14" rx="3">
-      <animate attributeName="y" from="-20" to="230" dur="3.4s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="120" y="-40" width="14" height="14" rx="3">
-      <animate attributeName="y" from="-40" to="230" dur="3.8s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="120" y="-60" width="14" height="14" rx="3">
-      <animate attributeName="y" from="-60" to="230" dur="4.2s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="120" y="-80" width="14" height="14" rx="3">
-      <animate attributeName="y" from="-80" to="230" dur="4.6s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="120" y="-100" width="14" height="14" rx="3">
-      <animate attributeName="y" from="-100" to="230" dur="5s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="120" y="-120" width="14" height="14" rx="3">
-      <animate attributeName="y" from="-120" to="230" dur="5.4s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="120" y="-140" width="14" height="14" rx="3">
-      <animate attributeName="y" from="-140" to="230" dur="5.8s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-
-  <!-- Column 3 -->
-  <g fill="var(--green)">
-    <rect x="160" y="-10" width="14" height="14" rx="3">
-      <animate attributeName="y" from="-10" to="230" dur="3.1s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="160" y="-30" width="14" height="14" rx="3">
-      <animate attributeName="y" from="-30" to="230" dur="3.5s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="160" y="-50" width="14" height="14" rx="3">
-      <animate attributeName="y" from="-50" to="230" dur="3.9s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="160" y="-70" width="14" height="14" rx="3">
-      <animate attributeName="y" from="-70" to="230" dur="4.3s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="160" y="-90" width="14" height="14" rx="3">
-      <animate attributeName="y" from="-90" to="230" dur="4.7s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="160" y="-110" width="14" height="14" rx="3">
-      <animate attributeName="y" from="-110" to="230" dur="5.1s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="160" y="-130" width="14" height="14" rx="3">
-      <animate attributeName="y" from="-130" to="230" dur="5.5s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-
-  <!-- (We don't need 52 columns for effect; this already reads as a grid wave) -->
-
-  <!-- Explosion flashes (fake hit effects) -->
-  <circle cx="160" cy="90" r="6" fill="var(--red)" opacity="0">
-    <animate attributeName="opacity" from="0" to="1" dur="0.15s" begin="0s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" from="1" to="0" dur="0.15s" begin="0.15s" repeatCount="indefinite"/>
+  <circle cx="310" cy="80" r="4" fill="var(--red)">
+    <animate attributeName="opacity" values="0;1;0" dur="0.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="510" cy="60" r="4" fill="var(--red)">
+    <animate attributeName="opacity" values="0;1;0" dur="0.9s" begin="0.5s" repeatCount="indefinite"/>
   </circle>
 
-  <circle cx="120" cy="110" r="6" fill="var(--red)" opacity="0">
-    <animate attributeName="opacity" from="0" to="1" dur="0.15s" begin="0.6s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" from="1" to="0" dur="0.15s" begin="0.75s" repeatCount="indefinite"/>
-  </circle>
-
-  <circle cx="200" cy="80" r="6" fill="var(--red)" opacity="0">
-    <animate attributeName="opacity" from="0" to="1" dur="0.15s" begin="1.2s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" from="1" to="0" dur="0.15s" begin="1.35s" repeatCount="indefinite"/>
-  </circle>
-
-  <!-- Footer -->
-  <text x="20" y="250" fill="var(--muted)" font-size="12">
-    Shooting commits • Keeping the streak alive • Always shipping 🚀
+  <text x="25" y="185" fill="var(--muted)" font-size="11" font-style="italic">
+    def destroy_bugs(): while (alive): shoot_code() 🚀
   </text>
 </svg>
