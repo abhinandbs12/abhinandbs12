@@ -7,16 +7,6 @@
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=20&pause=1000&center=true&vCenter=true&width=600&lines=Building+Cool+Projects;Learning+DSA+and+Web+Dev;Turning+Ideas+Into+Code;Welcome+to+My+GitHub+Profile" />
 </p>
 
----
-
-## 🎮 Live Commits Shooter (Animated)
-
-> A mini shooter inspired by the GitHub contributions grid — runs as an animation right inside my profile 😄
-
-![Commits Shooter](https://raw.githubusercontent.com/abhinandbs12/abhinandbs12/main/shooter.svg)
-
----
-
 ## 🧠 About Me
 
 - 🎓 Computer Science Engineering student  
@@ -56,15 +46,13 @@
 
 - 🌐 Web UI & frontend projects  
 - ☕ Java & DSA practice  
-- 🧪 Experiments with HTML, CSS & JS  
-- 🎨 Creative profile stuff like the commits shooter 😄  
+- 🧪 Experiments with HTML, CSS & JS   
 
 ---
 
 ## 🤝 Let’s Connect
 
-- 💼 LinkedIn: (add your link here)
-- 🌐 Portfolio: (add your link here)
+- 💼 LinkedIn: https://www.linkedin.com/in/abhinandbs12/
 - 📫 GitHub: You’re already here 😉
 
 ---
