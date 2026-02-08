@@ -1,97 +1,106 @@
-<svg width="820" height="200" viewBox="0 0 820 200" xmlns="http://www.w3.org/2000/svg">
+<svg width="820" height="340" viewBox="0 0 820 340" xmlns="http://www.w3.org/2000/svg">
   <style>
     :root {
       --bg: #0d1117;
-      --fg: #c9d1d9;
-      --muted: #8b949e;
+      --border: #30363d;
+      --empty: #161b22;
       --l1: #0e4429;
       --l2: #006d32;
       --l3: #26a641;
       --l4: #39d353;
-      --blue: #58a6ff;
-      --yellow: #f1e05a;
-      --red: #f85149;
+      --laser: #f1e05a;
     }
-    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
-    .day-label { font-size: 9px; fill: var(--muted); }
-    .month-label { font-size: 10px; fill: var(--muted); }
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; fill: #8b949e; }
+    .header { font-size: 14px; font-weight: 600; fill: #c9d1d9; }
+    .label { font-size: 10px; }
   </style>
 
-  <rect width="820" height="200" rx="6" fill="var(--bg)"/>
+  <rect width="820" height="340" rx="8" fill="var(--bg)" stroke="var(--border)"/>
 
-  <text x="25" y="25" fill="var(--fg)" font-size="14" font-weight="600">
-    Abhinand BS / Commits Blaster
-    <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
-  </text>
-  <text x="730" y="25" fill="var(--muted)" font-size="12">Level: ∞</text>
+  <g transform="translate(30, 35)">
+    <text class="header">CONTRIBUTION DEFENDER v4.0</text>
+    <text y="22" font-size="12" font-family="monospace">
+      STREAK: <tspan fill="var(--l4)">ACTIVE</tspan>
+      <tspan dx="20">NODE_STATUS: </tspan><tspan fill="var(--l4)">STABLE</tspan>
+    </text>
+  </g>
 
-  <text x="10" y="62" class="day-label">Mon</text>
-  <text x="10" y="86" class="day-label">Wed</text>
-  <text x="10" y="110" class="day-label">Fri</text>
-  <text x="40" y="45" class="month-label">Jan</text>
-  <text x="160" y="45" class="month-label">Feb</text>
-  <text x="280" y="45" class="month-label">Mar</text>
+  <g transform="translate(60, 100)">
+    <text x="0" y="-15" class="label">Week 1</text>
+    <text x="60" y="-15" class="label">Week 5</text>
+    <text x="120" y="-15" class="label">Week 9</text>
 
-  <g transform="translate(40, 52)">
-    <script type="text/ecmascript">
-      /* This is just a visual representation via SVG nodes */
-    </script>
-    
-    <g>
-      <rect x="0" y="0" width="10" height="10" rx="2" fill="var(--l1)">
-        <animate attributeName="y" from="-50" to="150" dur="4s" repeatCount="indefinite" />
-      </rect>
-      <rect x="0" y="12" width="10" height="10" rx="2" fill="var(--l2)">
-        <animate attributeName="y" from="-38" to="162" dur="4s" repeatCount="indefinite" />
-      </rect>
-      <rect x="0" y="24" width="10" height="10" rx="2" fill="var(--l4)">
-        <animate attributeName="y" from="-26" to="174" dur="4s" repeatCount="indefinite" />
-      </rect>
-    </g>
+    <text x="-35" y="10" class="label">Mon</text>
+    <text x="-35" y="38" class="label">Wed</text>
+    <text x="-35" y="66" class="label">Fri</text>
 
-    <g transform="translate(24, 0)">
-      <rect x="0" y="0" width="10" height="10" rx="2" fill="var(--l3)">
-        <animate attributeName="y" from="-80" to="120" dur="3.5s" repeatCount="indefinite" />
-      </rect>
-      <rect x="0" y="12" width="10" height="10" rx="2" fill="var(--l1)">
-        <animate attributeName="y" from="-68" to="132" dur="3.5s" repeatCount="indefinite" />
-      </rect>
-    </g>
+    <g id="grid">
+      <g transform="translate(0,0)">
+        <rect width="11" height="11" rx="2" fill="var(--l1)"/>
+        <rect y="14" width="11" height="11" rx="2" fill="var(--empty)"><animate attributeName="fill" to="var(--l4)" dur="0.1s" begin="0.5s;10.5s" fill="freeze"/></rect>
+        <rect y="28" width="11" height="11" rx="2" fill="var(--l2)"/>
+        <rect y="42" width="11" height="11" rx="2" fill="var(--empty)"><animate attributeName="fill" to="var(--l3)" dur="0.1s" begin="0.5s;10.5s" fill="freeze"/></rect>
+        <rect y="56" width="11" height="11" rx="2" fill="var(--l1)"/>
+        <rect y="70" width="11" height="11" rx="2" fill="var(--empty)"><animate attributeName="fill" to="var(--l2)" dur="0.1s" begin="0.5s;10.5s" fill="freeze"/></rect>
+        <rect y="84" width="11" height="11" rx="2" fill="var(--l3)"/>
+      </g>
 
-    <g transform="translate(48, 0)">
-      <rect x="0" y="0" width="10" height="10" rx="2" fill="var(--l4)">
-        <animate attributeName="y" from="-20" to="180" dur="5s" repeatCount="indefinite" />
-      </rect>
+      <g transform="translate(15,0)">
+        <rect width="11" height="11" rx="2" fill="var(--empty)"><animate attributeName="fill" to="var(--l2)" dur="0.1s" begin="1s;11s" fill="freeze"/></rect>
+        <rect y="14" width="11" height="11" rx="2" fill="var(--l1)"/>
+        <rect y="28" width="11" height="11" rx="2" fill="var(--empty)"><animate attributeName="fill" to="var(--l4)" dur="0.1s" begin="1s;11s" fill="freeze"/></rect>
+        <rect y="42" width="11" height="11" rx="2" fill="var(--l2)"/>
+        <rect y="56" width="11" height="11" rx="2" fill="var(--empty)"><animate attributeName="fill" to="var(--l3)" dur="0.1s" begin="1s;11s" fill="freeze"/></rect>
+        <rect y="70" width="11" height="11" rx="2" fill="var(--l1)"/>
+        <rect y="84" width="11" height="11" rx="2" fill="var(--empty)"><animate attributeName="fill" to="var(--l2)" dur="0.1s" begin="1s;11s" fill="freeze"/></rect>
+      </g>
+
+      <g transform="translate(30,0)">
+        <rect width="11" height="11" rx="2" fill="var(--l3)"/>
+        <rect y="14" width="11" height="11" rx="2" fill="var(--empty)"><animate attributeName="fill" to="var(--l2)" dur="0.1s" begin="1.5s;11.5s" fill="freeze"/></rect>
+        <rect y="28" width="11" height="11" rx="2" fill="var(--l1)"/>
+        <rect y="42" width="11" height="11" rx="2" fill="var(--empty)"><animate attributeName="fill" to="var(--l4)" dur="0.1s" begin="1.5s;11.5s" fill="freeze"/></rect>
+        <rect y="56" width="11" height="11" rx="2" fill="var(--l2)"/>
+        <rect y="70" width="11" height="11" rx="2" fill="var(--empty)"><animate attributeName="fill" to="var(--l3)" dur="0.1s" begin="1.5s;11.5s" fill="freeze"/></rect>
+        <rect y="84" width="11" height="11" rx="2" fill="var(--l1)"/>
+      </g>
+
+      <g transform="translate(45,0)"><rect width="11" height="11" rx="2" fill="var(--empty)" y="0"/><rect y="14" width="11" height="11" rx="2" fill="var(--l1)"/><rect y="28" width="11" height="11" rx="2" fill="var(--empty)"/><rect y="42" width="11" height="11" rx="2" fill="var(--l2)"/><rect y="56" width="11" height="11" rx="2" fill="var(--empty)"/><rect y="70" width="11" height="11" rx="2" fill="var(--l1)"/><rect y="84" width="11" height="11" rx="2" fill="var(--empty)"/></g>
+      <g transform="translate(60,0)"><rect width="11" height="11" rx="2" fill="var(--l2)" y="0"/><rect y="14" width="11" height="11" rx="2" fill="var(--empty)"/><rect y="28" width="11" height="11" rx="2" fill="var(--l1)"/><rect y="42" width="11" height="11" rx="2" fill="var(--empty)"/><rect y="56" width="11" height="11" rx="2" fill="var(--l2)"/><rect y="70" width="11" height="11" rx="2" fill="var(--empty)"/><rect y="84" width="11" height="11" rx="2" fill="var(--l1)"/></g>
+      <g transform="translate(75,0)"><rect width="11" height="11" rx="2" fill="var(--empty)" y="0"/><rect y="14" width="11" height="11" rx="2" fill="var(--l1)"/><rect y="28" width="11" height="11" rx="2" fill="var(--empty)"/><rect y="42" width="11" height="11" rx="2" fill="var(--l2)"/><rect y="56" width="11" height="11" rx="2" fill="var(--empty)"/><rect y="70" width="11" height="11" rx="2" fill="var(--l1)"/><rect y="84" width="11" height="11" rx="2" fill="var(--empty)"/></g>
+      <g transform="translate(90,0)"><rect width="11" height="11" rx="2" fill="var(--l1)" y="0"/><rect y="14" width="11" height="11" rx="2" fill="var(--empty)"/><rect y="28" width="11" height="11" rx="2" fill="var(--l2)"/><rect y="42" width="11" height="11" rx="2" fill="var(--empty)"/><rect y="56" width="11" height="11" rx="2" fill="var(--l1)"/><rect y="70" width="11" height="11" rx="2" fill="var(--empty)"/><rect y="84" width="11" height="11" rx="2" fill="var(--l2)"/></g>
+      <g transform="translate(105,0)"><rect width="11" height="11" rx="2" fill="var(--empty)" y="0"/><rect y="14" width="11" height="11" rx="2" fill="var(--l1)"/><rect y="28" width="11" height="11" rx="2" fill="var(--empty)"/><rect y="42" width="11" height="11" rx="2" fill="var(--l2)"/><rect y="56" width="11" height="11" rx="2" fill="var(--empty)"/><rect y="70" width="11" height="11" rx="2" fill="var(--l1)"/><rect y="84" width="11" height="11" rx="2" fill="var(--empty)"/></g>
+      <g transform="translate(120,0)"><rect width="11" height="11" rx="2" fill="var(--l2)" y="0"/><rect y="14" width="11" height="11" rx="2" fill="var(--empty)"/><rect y="28" width="11" height="11" rx="2" fill="var(--l1)"/><rect y="42" width="11" height="11" rx="2" fill="var(--empty)"/><rect y="56" width="11" height="11" rx="2" fill="var(--l2)"/><rect y="70" width="11" height="11" rx="2" fill="var(--empty)"/><rect y="84" width="11" height="11" rx="2" fill="var(--l1)"/></g>
+      <g transform="translate(135,0)"><rect width="11" height="11" rx="2" fill="var(--empty)" y="0"/><rect y="14" width="11" height="11" rx="2" fill="var(--l1)"/><rect y="28" width="11" height="11" rx="2" fill="var(--empty)"/><rect y="42" width="11" height="11" rx="2" fill="var(--l2)"/><rect y="56" width="11" height="11" rx="2" fill="var(--empty)"/><rect y="70" width="11" height="11" rx="2" fill="var(--l1)"/><rect y="84" width="11" height="11" rx="2" fill="var(--empty)"/></g>
+      <g transform="translate(150,0)"><rect width="11" height="11" rx="2" fill="var(--l1)" y="0"/><rect y="14" width="11" height="11" rx="2" fill="var(--empty)"/><rect y="28" width="11" height="11" rx="2" fill="var(--l2)"/><rect y="42" width="11" height="11" rx="2" fill="var(--empty)"/><rect y="56" width="11" height="11" rx="2" fill="var(--l1)"/><rect y="70" width="11" height="11" rx="2" fill="var(--empty)"/><rect y="84" width="11" height="11" rx="2" fill="var(--l2)"/></g>
+      <g transform="translate(165,0)"><rect width="11" height="11" rx="2" fill="var(--empty)" y="0"/><rect y="14" width="11" height="11" rx="2" fill="var(--l1)"/><rect y="28" width="11" height="11" rx="2" fill="var(--empty)"/><rect y="42" width="11" height="11" rx="2" fill="var(--l2)"/><rect y="56" width="11" height="11" rx="2" fill="var(--empty)"/><rect y="70" width="11" height="11" rx="2" fill="var(--l1)"/><rect y="84" width="11" height="11" rx="2" fill="var(--empty)"/></g>
     </g>
   </g>
 
   <g>
-    <path d="M400,160 L420,160 L410,145 Z" fill="var(--blue)">
+    <g transform="translate(65, 260)">
+      <path d="M-10,0 L10,0 L0,-18 Z" fill="var(--l3)" />
+      <path d="M-12,5 L12,5 L0,-2 Z" fill="var(--l4)" opacity="0.6">
+        <animate attributeName="opacity" values="0.2;0.8;0.2" dur="0.2s" repeatCount="indefinite" />
+      </path>
       <animateTransform attributeName="transform" type="translate"
-        values="-100 0; 100 0; -100 0" dur="6s" repeatCount="indefinite"/>
-    </path>
-    <rect width="2" height="6" fill="var(--yellow)">
-      <animateTransform attributeName="transform" type="translate"
-        values="310 145; 310 40" dur="0.8s" repeatCount="indefinite"/>
-    </rect>
-    <rect width="2" height="6" fill="var(--yellow)">
-      <animateTransform attributeName="transform" type="translate"
-        values="410 145; 410 40" dur="1s" repeatCount="indefinite" begin="0.2s"/>
-    </rect>
-    <rect width="2" height="6" fill="var(--yellow)">
-      <animateTransform attributeName="transform" type="translate"
-        values="510 145; 510 40" dur="0.9s" repeatCount="indefinite" begin="0.5s"/>
+        values="65,260; 230,260; 65,260" dur="10s" repeatCount="indefinite" />
+    </g>
+
+    <rect width="2" height="25" fill="var(--laser)" opacity="0">
+      <animate attributeName="opacity" values="0;1;0" dur="0.5s" repeatCount="indefinite" />
+      <animate attributeName="x" values="65; 230; 65" dur="10s" repeatCount="indefinite" />
+      <animate attributeName="y" values="240; 110" dur="0.5s" repeatCount="indefinite" />
     </rect>
   </g>
 
-  <circle cx="310" cy="80" r="4" fill="var(--red)">
-    <animate attributeName="opacity" values="0;1;0" dur="0.8s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="510" cy="60" r="4" fill="var(--red)">
-    <animate attributeName="opacity" values="0;1;0" dur="0.9s" begin="0.5s" repeatCount="indefinite"/>
-  </circle>
-
-  <text x="25" y="185" fill="var(--muted)" font-size="11" font-style="italic">
-    def destroy_bugs(): while (alive): shoot_code() 🚀
-  </text>
+  <g transform="translate(640, 310)">
+    <text x="-45" y="10" class="label">Less</text>
+    <rect x="-15" y="0" width="11" height="11" rx="2" fill="var(--empty)"/>
+    <rect x="0" y="0" width="11" height="11" rx="2" fill="var(--l1)"/>
+    <rect x="15" y="0" width="11" height="11" rx="2" fill="var(--l2)"/>
+    <rect x="30" y="0" width="11" height="11" rx="2" fill="var(--l3)"/>
+    <rect x="45" y="0" width="11" height="11" rx="2" fill="var(--l4)"/>
+    <text x="60" y="10" class="label">More</text>
+  </g>
 </svg>
