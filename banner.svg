@@ -1,0 +1,29 @@
+<svg width="900" height="120" viewBox="0 0 900 120" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    :root {
+      --bg: var(--color-canvas-default, #0d1117);
+      --fg: var(--color-fg-default, #c9d1d9);
+      --accent: #58a6ff;
+    }
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+
+  <rect width="900" height="120" fill="var(--bg)"/>
+
+  <!-- Scanning line -->
+  <rect x="0" y="0" width="900" height="4" fill="var(--accent)">
+    <animate attributeName="y" from="0" to="116" dur="2.5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Typing-like text -->
+  <text x="40" y="70" fill="var(--fg)" font-size="28">
+    <tspan>
+      Welcome to Abhinand's GitHub
+      <animate attributeName="opacity" from="0.3" to="1" dur="1.2s" repeatCount="indefinite"/>
+    </tspan>
+  </text>
+
+  <text x="40" y="100" fill="var(--accent)" font-size="16">
+    Building • Learning • Shipping 🚀
+  </text>
+</svg>
